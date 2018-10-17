@@ -6,7 +6,7 @@ module Discord
       event.bot.game = configatron.discord.bot_game
     end
     
-    bot.message(with_text: "Ping!") do |event|
+    message(with_text: "Ping!") do |event|
       event.respond "Pong!"
     end    
   end
