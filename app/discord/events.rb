@@ -47,7 +47,7 @@ end
 
 def event_send_attachments event, destiny
   event.message.attachments.each do |file|
-    $bot.send_message 502211507304792064, file.url
+    $bot.send_message destiny, file.url
   end
 end
 
