@@ -53,5 +53,5 @@ def event2message event
   message = event.message.content
   author  = event.message.author.username
 
-  return "Rift Origem: #{server}, por #{author}:\n#{message}"
+  return "**Rift Origem: #{server}, por #{author}:**\n#{message}"
 end
