@@ -15,3 +15,6 @@ group :development do
   gem 'pry-byebug'
   gem 'rerun'
 end
+
+
+ruby '2.4.4'
