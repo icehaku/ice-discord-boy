@@ -7,10 +7,10 @@ module Discord
     module Events
       extend Discordrb::EventContainer
 
-      #general-discordthur: 426072245538914316
-      #bot-debug: 502211507304792064
+      #general-discordthur: 503540635232370688
+      #bot-debug: 503762979112615937
 
-      discordthur = 426072245538914316
+      discordthur = 503540635232370688
 
       message(with_text: textAnySize("Chora Bixão"), in: discordthur ) do |event|
         event.respond "Eu sei que tu chora, chora ai :clap: :clap: :clap:"
