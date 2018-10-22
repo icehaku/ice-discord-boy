@@ -40,11 +40,7 @@ module Discord
           event.respond "vo ali com um cigarro, volto jah..."
         end
 
-        message(with_text: textAnySize("=O"), in: miguxos_fortnite_main) do |event|
-          event.respond "https://imgur.com/a/qWmxO4M"
-        end
-
-        message(with_text: textAnySize(":O"), in: miguxos_fortnite_main) do |event|
+        message(with_text: textAnySize("=Opika"), in: miguxos_fortnite_main) do |event|
           event.respond "https://imgur.com/a/qWmxO4M"
         end
 
