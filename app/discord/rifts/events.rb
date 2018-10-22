@@ -39,7 +39,7 @@ def event_send_attachments event, destiny
     url      = file.url
     filename = file.filename
     open(filename, 'wb') do |local_file|
-      binding.pry
+      #binding.pry
       local_file << open(url).read
       $bot.send_file(destiny, File.open(local_file.path,'r'))
       File.delete(local_file.path) if File.exist?(local_file.path)
