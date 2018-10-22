@@ -87,6 +87,23 @@ module Discord
       message(with_text: textAnySize("hots"), in: discordthur ) do |event|
         event.respond "Pfii que jogo tosco"
       end
+      
+      message(with_text: textAnySize("mundo da voltas"), in: discordthur ) do |event|
+        event.respond "https://imgur.com/a/nWQhHAZ"
+      end
+      
+      message(with_text: textAnySize("mundo_voltas"), in: discordthur ) do |event|
+        event.respond "https://imgur.com/a/nWQhHAZ"
+      end     
+      
+      message(with_text: textAnySize("jogo_virou"), in: discordthur ) do |event|
+        event.respond "https://imgur.com/a/GamGTH8"
+      end
+      
+      message(with_text: textAnySize("jogo virou"), in: discordthur ) do |event|
+        event.respond "https://imgur.com/a/GamGTH8"
+      end            
+      
     end
   end
 end
