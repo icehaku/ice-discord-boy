@@ -12,9 +12,14 @@ module Discord
         #bot-debug: 503762979112615937
         #miguxos-fortnite-main: 503548992995721217
 
+        bot_debug = 503762979112615937
         miguxos_fortnite_main = 503548992995721217
 
-        message(with_text: textAnySize("esc"), in: miguxos_fortnite_main) do |event|
+        message(with_text: textAnySize("lol"), in: bot_debug) do |event|
+          event.respond "omegalul"
+        end
+
+        message(with_text: textAnySize("esc"), in: [miguxos_fortnite_main, bot_debug]) do |event|
           user = event.message.author.username
           event.respond "Aperta esc aew #{user}!"
         end
