@@ -5,28 +5,26 @@ module Discord
     module Events
       extend Discordrb::EventContainer
 
-      #rift miguxos: 502239283248103454
-      #rift ICE: 502239603747454979
-      #bot-debug: 502211507304792064
-      #memes-discordthur 502295021190643712
-      #miguxos-memes 440359603742572555
+      #bot-debug: 503762979112615937
+      #memes-discordthur 503768374325674004
+      #miguxos-memes 503546722539143190
 
       #Discordthur to Miguxos
-      message(in: 502295021190643712) do |event|
+      message(in: 503768374325674004) do |event|
         server  = event.server.name
         message = event.message.content
         author  = event.message.author.username
-        $bot.send_message 440359603742572555, event2message(event)
-        event_send_attachments(event, 440359603742572555) if have_attachment?(event)
+        $bot.send_message 503546722539143190, event2message(event)
+        event_send_attachments(event, 503546722539143190) if have_attachment?(event)
       end
 
       #Miguxos to Discordthur
-      message(in: 440359603742572555) do |event|
+      message(in: 503546722539143190) do |event|
         server  = event.server.name
         message = event.message.content
         author  = event.message.author.username
-        $bot.send_message 502295021190643712, event2message(event)
-        event_send_attachments(event, 502295021190643712) if have_attachment?(event)
+        $bot.send_message 503768374325674004, event2message(event)
+        event_send_attachments(event, 503768374325674004) if have_attachment?(event)
       end
     end
   end
@@ -41,6 +39,7 @@ def event_send_attachments event, destiny
     url      = file.url
     filename = file.filename
     open(filename, 'wb') do |local_file|
+      binding.pry
       local_file << open(url).read
       $bot.send_file(destiny, File.open(local_file.path,'r'))
       File.delete(local_file.path) if File.exist?(local_file.path)
