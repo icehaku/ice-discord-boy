@@ -40,22 +40,6 @@ module Discord
           event.respond "vo ali com um cigarro, volto jah..."
         end
 
-        message(with_text: textAnySize("=Opika"), in: miguxos_fortnite_main) do |event|
-          event.respond "https://imgur.com/a/qWmxO4M"
-        end
-
-        message(with_text: textAnySize("tururu"), in: miguxos_fortnite_main) do |event|
-          event.respond "https://www.youtube.com/watch?v=wEWF2xh5E8s"
-        end
-
-        message(with_text: textAnySize("sad"), in: miguxos_fortnite_main) do |event|
-          event.respond "https://www.youtube.com/watch?v=wEWF2xh5E8s"
-        end
-
-        message(with_text: textAnySize("triste"), in: miguxos_fortnite_main) do |event|
-          event.respond "https://www.youtube.com/watch?v=wEWF2xh5E8s"
-        end
-
         message(with_text: textAnySize("anao"), in: miguxos_fortnite_main) do |event|
           event.respond "anao"
         end
