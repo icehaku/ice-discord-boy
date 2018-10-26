@@ -52,6 +52,10 @@ module Discord
     message(with_text: textAnySize("pare")) do |event|
       event.respond "https://imgur.com/a/KTywwYA"
     end
+    
+    message(with_text: textAnySize("gloria")) do |event|
+      event.respond "Gloria a DEUXXSSSS"
+    end    
 
   end
 end
