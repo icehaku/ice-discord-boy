@@ -32,7 +32,7 @@ module Discord
       event.respond "https://www.youtube.com/watch?v=wEWF2xh5E8s"
     end
 
-    message(contains: textAnySize("sad")) do |event|
+    message(contains: textAnySize(" sad ")) do |event|
       event.respond "https://www.youtube.com/watch?v=wEWF2xh5E8s"
     end
 
