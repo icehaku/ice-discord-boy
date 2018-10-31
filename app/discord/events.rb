@@ -40,7 +40,7 @@ module Discord
       event.respond "https://www.youtube.com/watch?v=wEWF2xh5E8s"
     end
 
-    message(contains: textAnySize("pare")) do |event|
+    message(contains: \bpare\b do |event|
       event.respond "https://imgur.com/a/KTywwYA"
     end
 
