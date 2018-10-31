@@ -1,3 +1,5 @@
+#require 'app/helper.rb'
+
 require_all 'app/discord/**/*.rb'
 
 $bot = Discordrb::Commands::CommandBot.new(

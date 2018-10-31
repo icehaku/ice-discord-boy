@@ -9,7 +9,6 @@ module Discord
     end
 
     message(with_text: "Debug!", from: 111699525629943808) do |event|
-      binding.pry
       event.respond "Debugado!"
     end
 
@@ -17,45 +16,41 @@ module Discord
       event.respond "Pong!"
     end
 
-    message(with_text: textAnySize("mundo da voltas")) do |event|
+    message(contains: textAnySize("mundo da voltas")) do |event|
       event.respond "https://imgur.com/a/nWQhHAZ"
     end
 
-    message(with_text: textAnySize("mundo_voltas")) do |event|
-      event.respond "https://imgur.com/a/nWQhHAZ"
-    end
-
-    message(with_text: textAnySize("jogo_virou")) do |event|
+    message(contains: textAnySize("jogo virou")) do |event|
       event.respond "https://imgur.com/a/GamGTH8"
     end
 
-    message(with_text: textAnySize("jogo virou")) do |event|
-      event.respond "https://imgur.com/a/GamGTH8"
-    end
-
-    message(with_text: textAnySize("=Opika")) do |event|
+    message(contains: textAnySize("=Opika")) do |event|
       event.respond "https://imgur.com/a/qWmxO4M"
     end
 
-    message(with_text: textAnySize("tururu")) do |event|
+    message(contains: textAnySize("triste")) do |event|
       event.respond "https://www.youtube.com/watch?v=wEWF2xh5E8s"
     end
 
-    message(with_text: textAnySize("sad")) do |event|
+    message(contains: textAnySize("sad")) do |event|
       event.respond "https://www.youtube.com/watch?v=wEWF2xh5E8s"
     end
 
-    message(with_text: textAnySize("triste")) do |event|
+    message(contains: textAnySize("tururu")) do |event|
       event.respond "https://www.youtube.com/watch?v=wEWF2xh5E8s"
     end
 
-    message(with_text: textAnySize("pare")) do |event|
+    message(contains: textAnySize("pare")) do |event|
       event.respond "https://imgur.com/a/KTywwYA"
     end
-    
-    message(with_text: textAnySize("gloria")) do |event|
+
+    message(contains: textAnySize("gloria")) do |event|
       event.respond "Gloria a DEUXXSSSS"
-    end    
+    end
+
+    message(contains: textAnySize("kkk")) do |event|
+      event.respond "eae man kkk"
+    end
 
   end
 end
