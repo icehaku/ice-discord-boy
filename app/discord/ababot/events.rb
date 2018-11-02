@@ -1,5 +1,5 @@
 def textAnySize text
-  regex_string = '\b'+text+'|'+text.downcase+'|'+text.upcase+'|'+text.capitalize+'|'+text.titleize+'\b'
+  regex_string = '\b('+text+'|'+text.downcase+'|'+text.upcase+'|'+text.capitalize+'|'+text.titleize+')\b'
   Regexp.new regex_string
 end
 
