@@ -1,5 +1,6 @@
 def textAnySize text
-  [text, text.downcase, text.upcase, text.capitalize, text.titleize]
+  regex_string = '\b'+text+'|'+text.downcase+'|'+text.upcase+'|'+text.capitalize+'|'+text.titleize+'\b'
+  Regexp.new regex_string
 end
 
 module Discord
@@ -81,7 +82,7 @@ module Discord
       end
 
       message(contains: textAnySize("indireta"), in: discordthur ) do |event|
-        event.respond "peixonauta é uma indireta schwarz"
+        event.respond "peixonauta é uma indireta"
       end
 
       message(contains: textAnySize("hots"), in: discordthur ) do |event|

@@ -9,6 +9,7 @@ module Discord
     end
 
     message(with_text: "Debug!", from: 111699525629943808) do |event|
+      #binding.pry
       event.respond "Debugado!"
     end
 
@@ -40,7 +41,7 @@ module Discord
       event.respond "https://www.youtube.com/watch?v=wEWF2xh5E8s"
     end
 
-    message(contains: /\bpare\b/ do |event|
+    message(contains: textAnySize("pare")) do |event|
       event.respond "https://imgur.com/a/KTywwYA"
     end
 
