@@ -52,6 +52,10 @@ module Discord
     message(contains: textAnySize("kkk")) do |event|
       event.respond "eae man kkk"
     end
-
+    
+    message(contains: textAnySize("omegalul")) do |event|
+      event.respond "https://imgur.com/a/KTLHk0p"
+    end    
+    
   end
 end
