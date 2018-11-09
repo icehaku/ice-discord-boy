@@ -57,5 +57,9 @@ module Discord
       event.respond "https://imgur.com/a/KTLHk0p"
     end    
     
+    message(contains: textAnySize("um momento")) do |event|
+      event.respond "https://imgur.com/a/pRBvmkR"
+    end            
+    
   end
 end
