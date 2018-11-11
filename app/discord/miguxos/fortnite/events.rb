@@ -44,6 +44,10 @@ module Discord
           event.respond "atapo"
         end
 
+        message(contains: textAnySize("goblin"), in: miguxos_fortnite_main) do |event|
+          event.respond "https://i.imgur.com/2xvsG7L.png"
+        end        
+        
       end
     end
   end
