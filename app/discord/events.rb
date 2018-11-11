@@ -25,7 +25,7 @@ module Discord
       event.respond "https://imgur.com/a/GamGTH8"
     end
 
-    message(contains: textAnySize("=Opika")) do |event|
+    message(contains: textAnySize("pikachuo")) do |event|
       event.respond "https://imgur.com/a/qWmxO4M"
     end
 
