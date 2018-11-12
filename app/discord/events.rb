@@ -53,8 +53,8 @@ module Discord
       event.respond "eae man kkk"
     end
     
-    message(contains: textAnySize("omegalul")) do |event|
-      event.respond "https://imgur.com/a/KTLHk0p"
+    message(contains: textAnySize("eomegalule")) do |event|
+      event.respond "https://i.imgur.com/jYtfRix.jpg"
     end    
     
     message(contains: textAnySize("um momento")) do |event|
