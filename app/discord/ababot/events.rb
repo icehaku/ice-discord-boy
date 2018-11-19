@@ -12,6 +12,7 @@ module Discord
       #bot-debug: 503762979112615937
 
       discordthur = 503540635232370688
+      minice = 456627300214112257
 
       message(contains: textAnySize("Chora Bixão"), in: discordthur ) do |event|
         event.respond "Eu sei que tu chora, chora ai :clap: :clap: :clap:"
@@ -89,6 +90,10 @@ module Discord
         event.respond "Pfii que jogo tosco"
       end
 
+      message(in: minice, from: 456589002410033153 ) do |event|
+        $bot.send_message 514179383670603797, "@Ice"
+      end      
+      
     end
   end
 end
