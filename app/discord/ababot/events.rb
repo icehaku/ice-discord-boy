@@ -92,6 +92,14 @@ module Discord
 
       message(in: minice, from: 456589002410033153 ) do |event|
         $bot.send_message 514179383670603797, "@Ice#5470"
+        $bot.send_message 514179383670603797, "@Ice"
+        $bot.send_message 514179383670603797, "hey @Ice#5470"
+        $bot.send_message 514179383670603797, "hey @Ice"
+        
+        $bot.send_message 514179383670603797, '@Ice#5470'
+        $bot.send_message 514179383670603797, '@Ice'        
+        $bot.send_message 514179383670603797, 'hey @Ice#5470'
+        $bot.send_message 514179383670603797, 'hey @Ice'        
       end      
       
     end
