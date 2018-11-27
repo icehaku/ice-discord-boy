@@ -48,6 +48,14 @@ module Discord
           event.respond "https://i.imgur.com/2xvsG7L.png"
         end        
         
+        message(contains: textAnySize("de 4"), in: miguxos_fortnite_main) do |event|
+          event.respond "Se eu for dormir 10hs eu acordo de 4. GAMEPLAY, Larke"
+        end         
+        
+        message(contains: textAnySize("de quatro"), in: miguxos_fortnite_main) do |event|
+          event.respond "Se eu for dormir 10hs eu acordo de 4. GAMEPLAY, Larke"
+        end          
+        
       end
     end
   end
