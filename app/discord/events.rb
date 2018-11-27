@@ -64,6 +64,10 @@ module Discord
     message(contains: textAnySize("ta safe")) do |event|
       event.respond "ta safe neh? https://i.imgur.com/54IxgZb.png"
     end
+    
+    message(contains: textAnySize("marrapais")) do |event|
+      event.respond "http://i.imgur.com/rF2HBBz.png"
+    end    
 
   end
 end
