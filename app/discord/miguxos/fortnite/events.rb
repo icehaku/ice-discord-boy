@@ -7,6 +7,7 @@ module Discord
 
         #bot-debug: 503762979112615937
         #miguxos-fortnite-main: 503548992995721217
+        #miguxos-server: 111701169704841216
 
         bot_debug = 503762979112615937
         miguxos_fortnite_main = 503548992995721217
@@ -46,16 +47,16 @@ module Discord
 
         message(contains: textAnySize("goblin"), in: miguxos_fortnite_main) do |event|
           event.respond "https://i.imgur.com/2xvsG7L.png"
-        end        
-        
+        end
+
         message(contains: textAnySize("de 4"), in: miguxos_fortnite_main) do |event|
           event.respond "Se eu for dormir 10hs eu acordo de 4. GAMEPLAY, Larke"
-        end         
-        
+        end
+
         message(contains: textAnySize("de quatro"), in: miguxos_fortnite_main) do |event|
           event.respond "Se eu for dormir 10hs eu acordo de 4. GAMEPLAY, Larke"
-        end          
-        
+        end
+
       end
     end
   end
