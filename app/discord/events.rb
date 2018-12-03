@@ -69,5 +69,9 @@ module Discord
       event.respond "http://i.imgur.com/rF2HBBz.png"
     end    
 
+    message(contains: textAnySize("plantão")) do |event|
+      event.respond "https://www.youtube.com/watch?v=7DYomde2YEc"
+    end    
+    
   end
 end
