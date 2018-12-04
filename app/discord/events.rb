@@ -1,3 +1,9 @@
+require 'nokogiri'
+require 'open-uri'
+require 'webdrivers'
+require 'watir'
+
+
 module Discord
   module Events
     extend Discordrb::EventContainer
@@ -10,8 +16,31 @@ module Discord
 
     message(with_text: "Debug!", from: 111699525629943808) do |event|
       #binding.pry
-      event.respond "Debugado!"
+      #event.respond "Debugado!"
     end
+
+    message(with_text: "!soupobre") do |event|
+
+      url = "https://www.stormshield.one/missions?missions_grid%5Breward_one%5D=MtxGiveaway"
+
+        event.respond "Vou tentar aqui seu fudido de merda, espera aew..."
+        browser = Watir::Browser.new
+        browser.goto url
+        event.respond "opa!"
+        doc = Nokogiri::HTML.parse(browser.html)
+        binding.pry
+        doc.search("table").search("tr").each do |missao|
+                binding.pry
+          html = doc.search("table").search("tr")[0].to_s
+          event.respond html
+        end
+
+    end
+
+
+
+
+
 
     message(with_text: "Ping!") do |event|
       event.respond "Pong!"
@@ -64,14 +93,14 @@ module Discord
     message(contains: textAnySize("ta safe")) do |event|
       event.respond "ta safe neh? https://i.imgur.com/54IxgZb.png"
     end
-    
+
     message(contains: textAnySize("marrapais")) do |event|
       event.respond "http://i.imgur.com/rF2HBBz.png"
-    end    
+    end
 
     message(contains: textAnySize("plantão")) do |event|
       event.respond "https://www.youtube.com/watch?v=7DYomde2YEc"
-    end    
-    
+    end
+
   end
 end

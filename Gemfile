@@ -10,6 +10,9 @@ gem 'sinatra-contrib'
 gem 'require_all'
 gem 'configatron'
 gem 'dotenv'
+gem 'nokogiri'
+gem 'watir'
+gem "webdrivers", "~> 3.0"
 
 group :development do
   gem 'pry-byebug'
