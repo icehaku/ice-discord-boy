@@ -9,8 +9,12 @@ module Discord
         extend Discordrb::Commands::CommandContainer
 
         command :apex do |event|
-          user = event.content.gsub("!apex ", "")
+          user = event.content.gsub("!apex", "").gsub("ps4", "").gsub("xbox", "").gsub(" ", "")
+
           base = "https://public-api.tracker.gg/apex/v1/standard/profile/5/"
+          base = "https://public-api.tracker.gg/apex/v1/standard/profile/2/" if event.content.include?("ps4")
+          base = "https://public-api.tracker.gg/apex/v1/standard/profile/1/" if event.content.include?("xbox")
+
           headers = {"TRN-Api-Key"=>"a2b40d7b-41f0-4d37-9a84-07a5ec55b69c"}
 
           result = HTTParty.get("#{base}/#{user}", headers: headers).body
