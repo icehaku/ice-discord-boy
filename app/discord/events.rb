@@ -8,39 +8,29 @@ module Discord
   module Events
     extend Discordrb::EventContainer
 
-    #bot-debug: 502211507304792064
-
     ready do |event|
       event.bot.game = configatron.discord.bot_game
     end
 
-    message(with_text: "Debug!", from: 111699525629943808) do |event|
+    message(with_text: "Debug!") do |event|
       #binding.pry
       #event.respond "Debugado!"
     end
 
-    message(with_text: "!soupobre") do |event|
-
-      url = "https://www.stormshield.one/missions?missions_grid%5Breward_one%5D=MtxGiveaway"
-
-        event.respond "Vou tentar aqui seu fudido de merda, espera aew..."
-        browser = Watir::Browser.new
-        browser.goto url
-        event.respond "opa!"
-        doc = Nokogiri::HTML.parse(browser.html)
-        binding.pry
-        doc.search("table").search("tr").each do |missao|
-                binding.pry
-          html = doc.search("table").search("tr")[0].to_s
-          event.respond html
-        end
-
-    end
-
-
-
-
-
+    #DEPRECADO
+#    message(with_text: "!soupobre") do |event|
+#      url = "https://www.stormshield.one/missions?missions_grid%5Breward_one%5D=MtxGiveaway"
+#      event.respond "Vou tentar aqui seu fudido de merda, espera aew..."
+#      browser = Watir::Browser.new
+#      browser.goto url
+#      event.respond "opa!"
+#      doc = Nokogiri::HTML.parse(browser.html)
+#      binding.pry
+#      doc.search("table").search("tr").each do |missao|
+#        html = doc.search("table").search("tr")[0].to_s
+#        event.respond html
+#      end
+#    end
 
     message(with_text: "Ping!") do |event|
       event.respond "Pong!"

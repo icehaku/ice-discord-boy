@@ -13,6 +13,7 @@ gem 'dotenv'
 gem 'nokogiri'
 gem 'watir'
 gem "webdrivers", "~> 3.0"
+gem 'httparty'
 
 group :development do
   gem 'pry-byebug'
