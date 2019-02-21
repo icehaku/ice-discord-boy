@@ -9,15 +9,21 @@ module Discord
         extend Discordrb::Commands::CommandContainer
 
         command :apex do |event|
-          user = event.content.gsub("!stats ", "")
+          user = event.content.gsub("!apex ", "")
           base = "https://public-api.tracker.gg/apex/v1/standard/profile/5/"
           headers = {"TRN-Api-Key"=>"a2b40d7b-41f0-4d37-9a84-07a5ec55b69c"}
 
           result = HTTParty.get("#{base}/#{user}", headers: headers).body
           result = JSON.parse(result)
 
+# binding.pry
+
           if result["errors"].present?
-            "Num existe esse user nao minha joia..."
+            if result["errors"][0]["message"].include?("The Apex Legends API may be down.")
+              event.respond "A API ta fora do ar, não é culpa minha seu arrombado, tenta denovo jaja!"
+            else
+              event.respond result["errors"][0]["message"]
+            end
           else
             player_info = "**[Player Info]______**\n"
             player_info += "Nome: "+result["data"]["metadata"]["platformUserHandle"]+", Level: "+result["data"]["metadata"]["level"].to_s+"\n"
@@ -41,10 +47,10 @@ module Discord
               end
             end
             event.respond player_legends_info
-          end
 
-          event.respond result["data"]["children"][0]["metadata"]["bgimage"]
-          event.respond "```ps: a fonte dos dados não é oficial, logo, pode ter incoerências...```"
+            event.respond result["data"]["children"][0]["metadata"]["bgimage"]
+            event.respond "```ps: a fonte dos dados não é oficial, logo, pode ter incoerências...```"
+          end
         end #end command stats
       end
     end
