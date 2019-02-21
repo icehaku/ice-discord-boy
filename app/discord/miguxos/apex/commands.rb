@@ -8,7 +8,7 @@ module Discord
 
         extend Discordrb::Commands::CommandContainer
 
-        command :stats do |event|
+        command :apex do |event|
           user = event.content.gsub("!stats ", "")
           base = "https://public-api.tracker.gg/apex/v1/standard/profile/5/"
           headers = {"TRN-Api-Key"=>"a2b40d7b-41f0-4d37-9a84-07a5ec55b69c"}
