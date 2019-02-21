@@ -22,11 +22,13 @@ module Discord
 
 # binding.pry
 
-          if result["errors"].present?
-            if result["errors"][0]["message"].include?("The Apex Legends API may be down.")
-              event.respond "A API ta fora do ar, não é culpa minha seu arrombado, tenta denovo jaja!"
-            else
+          if result["errors"].present? or result["error"].present?
+            if result["errors"].present?
               event.respond result["errors"][0]["message"]
+            elsif result["error"].present?
+              event.respond result["error"]
+            else
+              event.respond "Deu erro aew minha joia, e num deu nem pra saber o que é, pede pro Mestre Ice checar meus log!"
             end
           else
             player_info = "**[Player Info]______**\n"
