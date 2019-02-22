@@ -20,7 +20,7 @@ module Discord
           result = HTTParty.get("#{base}/#{user}", headers: headers).body
           result = JSON.parse(result)
 
-# binding.pry
+ #binding.pry
 
           if result["errors"].present? or result["error"].present?
             if result["errors"].present?
@@ -33,10 +33,15 @@ module Discord
           else
             player_info = "**[Player Info]______**\n"
             player_info += "Nome: "+result["data"]["metadata"]["platformUserHandle"]+", Level: "+result["data"]["metadata"]["level"].to_s+"\n"
-            player_info += "Total Kills: "+ result["data"]["stats"][1]["displayValue"].to_s+"\n"
-            player_info += "Total Kills Rank: "+ result["data"]["stats"][1]["displayRank"].to_s+"\n" if result["data"]["stats"][1]["displayRank"].present?
-            player_info += "Total Damage: "+ result["data"]["stats"][2]["displayValue"].to_s+"\n"
-            player_info += "Total Damage Rank: "+ result["data"]["stats"][2]["displayRank"].to_s+"\n" if result["data"]["stats"][2]["displayRank"].present?
+            if result["data"]["stats"][1].present?
+              player_info += "Total Kills: "+ result["data"]["stats"][1]["displayValue"].to_s+"\n"
+              player_info += "Total Kills Rank: "+ result["data"]["stats"][1]["displayRank"].to_s+"\n" if result["data"]["stats"][1]["displayRank"].present?
+            end
+
+            if result["data"]["stats"][2].present?
+              player_info += "Total Damage: "+ result["data"]["stats"][2]["displayValue"].to_s+"\n"
+              player_info += "Total Damage Rank: "+ result["data"]["stats"][2]["displayRank"].to_s+"\n" if result["data"]["stats"][2]["displayRank"].present?
+            end
             event.respond player_info
 
             player_legends_info = "**[Main Legend(s) Info]____________**"+"\n"
