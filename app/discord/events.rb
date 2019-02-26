@@ -92,5 +92,13 @@ module Discord
       event.respond "https://www.youtube.com/watch?v=7DYomde2YEc"
     end
 
+    message(contains: textAnySize("hacker")) do |event|
+      event.respond "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQebfDHU5W9dp59HyP8A9lTV7mcQKstZ5UZy_Zf-IM8bhCtsDnQ2Q"
+    end    
+
+    message(contains: textAnySize("hackerman")) do |event|
+      event.respond "https://i.kym-cdn.com/photos/images/newsfeed/001/176/251/4d7.png"
+    end        
+    
   end
 end
