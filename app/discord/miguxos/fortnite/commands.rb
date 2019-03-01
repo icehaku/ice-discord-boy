@@ -42,8 +42,28 @@ module Discord
             end
             event.respond "POR HOJE É SÓ MIA JOIA!"
           end
+        end #end command fortstore
 
-        end #end command stats
+        command(:fortcoming) do |event|
+          return unless event.channel.id == 551048576277545000
+          url = "https://fortnite-public-api.theapinetwork.com/prod09/upcoming/get"
+          result = HTTParty.get(url).body
+          result = JSON.parse(result)
+
+          if result["error"].present?
+            event.respond result["errorMessage"]
+          else
+            begin
+              result["items"].each do |item|
+                event.respond item["item"]["images"]["information"]
+              end
+
+              event.respond items
+            rescue Exception => erro
+              event.respond "EEEEETA PORRA, deu erro aqui, avisa ao mestre ice o erro é esse: "+erro.message
+            end
+          end
+        end  #end command fortcoming
       end
     end
   end
