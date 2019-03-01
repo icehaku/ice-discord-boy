@@ -9,14 +9,14 @@ module Discord
         #miguxos-fortnite-main: 503548992995721217
         #miguxos-server: 111701169704841216
 
-        bot_debug = 503762979112615937
+        # bot_debug = 503762979112615937
         miguxos_fortnite_main = 503548992995721217
 
-        message(contains: textAnySize("lol"), in: bot_debug) do |event|
-          event.respond "omegalul"
-        end
+        # message(contains: textAnySize("lol"), in: bot_debug) do |event|
+        #   event.respond "omegalul"
+        # end
 
-        message(contains: textAnySize("esc"), in: [miguxos_fortnite_main, bot_debug]) do |event|
+        message(contains: textAnySize("esc"), in: [miguxos_fortnite_main]) do |event|
           user = event.message.author.username
           event.respond "Aperta esc aew #{user}!"
         end
