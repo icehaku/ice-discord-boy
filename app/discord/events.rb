@@ -98,6 +98,14 @@ module Discord
 
     message(contains: textAnySize("hackerman")) do |event|
       event.respond "https://i.kym-cdn.com/photos/images/newsfeed/001/176/251/4d7.png"
+    end     
+
+    message(contains: textAnySize("já morreu")) do |event|
+      event.respond "http://i.imgur.com/kn6bR1U.png"
+    end           
+    
+    message(contains: textAnySize("ja morreu")) do |event|
+      event.respond "http://i.imgur.com/kn6bR1U.png"
     end        
     
   end
