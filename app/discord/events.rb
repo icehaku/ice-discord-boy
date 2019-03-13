@@ -91,7 +91,11 @@ module Discord
     message(contains: textAnySize("plantão")) do |event|
       event.respond "https://www.youtube.com/watch?v=7DYomde2YEc"
     end
-
+    
+    message(contains: textAnySize("plantao")) do |event|
+      event.respond "https://www.youtube.com/watch?v=7DYomde2YEc"
+    end
+    
     message(contains: textAnySize("hacker")) do |event|
       event.respond "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQebfDHU5W9dp59HyP8A9lTV7mcQKstZ5UZy_Zf-IM8bhCtsDnQ2Q"
     end    
@@ -106,6 +110,10 @@ module Discord
     
     message(contains: textAnySize("ja morreu")) do |event|
       event.respond "http://i.imgur.com/kn6bR1U.png"
+    end        
+    
+    message(contains: textAnySize("vai da merda")) do |event|
+      event.respond "https://youtu.be/c5ZRjdlLMEM"
     end        
     
   end
