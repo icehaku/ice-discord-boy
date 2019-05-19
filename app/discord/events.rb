@@ -114,7 +114,14 @@ module Discord
     
     message(contains: textAnySize("vai da merda")) do |event|
       event.respond "https://youtu.be/c5ZRjdlLMEM"
-    end        
+    end             
     
+    message(contains: textAnySize("84 anos")) do |event|
+      event.respond "https://imgur.com/a/KEPiJ4N"
+    end        
+        
+    message(contains: textAnySize("já fazem")) do |event|
+      event.respond "https://imgur.com/a/KEPiJ4N"
+    end        
   end
 end
