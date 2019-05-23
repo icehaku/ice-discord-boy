@@ -122,6 +122,10 @@ module Discord
         
     message(contains: textAnySize("já fazem")) do |event|
       event.respond "https://imgur.com/a/KEPiJ4N"
-    end        
+    end
+    
+    message(contains: textAnySize("briguem")) do |event|
+      event.respond "https://imgur.com/a/KbZRKds"
+    end       
   end
 end
