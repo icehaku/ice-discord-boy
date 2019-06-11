@@ -126,6 +126,15 @@ module Discord
     
     message(contains: textAnySize("briguem")) do |event|
       event.respond "https://imgur.com/a/KbZRKds"
-    end       
+    end      
+    
+    message(contains: textAnySize("como eu sou bonito")) do |event|
+      event.respond "https://www.youtube.com/watch?v=lL_c7AZLxgM"
+      event.respond "Meus deus todo poderoso, como eu sou bonito, como sou forte."
+      event.respond "Sim mais do que qualquer outra coisa da terra, a lua, as estrelas o sol brilhante, sao insignificantes diantes de mim."
+      event.respond " Nada eh mais bonito que eu."      
+    end     
+    
+    
   end
 end
