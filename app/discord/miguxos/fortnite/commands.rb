@@ -57,8 +57,6 @@ module Discord
               result["items"].each do |item|
                 event.respond item["item"]["images"]["information"]
               end
-
-              event.respond items
             rescue Exception => erro
               event.respond "EEEEETA PORRA, deu erro aqui, avisa ao mestre ice o erro é esse: "+erro.message
             end
