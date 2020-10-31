@@ -8,6 +8,10 @@ module Discord
     module Events
       extend Discordrb::EventContainer
 
+      ready do |event|
+        event.bot.game = configatron.discord.bot_game
+      end
+
       #general-discordthur: 503540635232370688
       #bot-debug: 503762979112615937
 
