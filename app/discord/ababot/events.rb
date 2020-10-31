@@ -90,9 +90,9 @@ module Discord
         event.respond "Pfii que jogo tosco"
       end
 
-      message(in: minice, from: 456589002410033153 ) do |event|
-        $bot.send_message 514179383670603797, 'hey <@111699525629943808>'
-      end
+      # message(in: minice, from: 456589002410033153 ) do |event|
+      #   $bot.send_message 514179383670603797, 'hey <@111699525629943808>'
+      # end
 
     end
   end
